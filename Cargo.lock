@@ -74,7 +74,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3290e0be77e9eeca366489c3b4010764dc897a83e5936a93857c3937f47a57aa"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-macros",
  "static_assertions",
 ]
@@ -90,12 +90,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "facet-core"
+version = "0.29.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "52e5c150b48fd89a6a880ca0a5e7cf09d1c7c51ff57af655a740166a8a3fabbb"
+dependencies = [
+ "bitflags",
+ "impls",
+]
+
+[[package]]
 name = "facet-macros"
 version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7eb526288148251e984f3a9ab3cef5191ca1da34a45fb5c548781e7053148e19"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-macros-emit",
 ]
 
@@ -127,18 +137,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c1d24ca6fb9db79b26cb5e37d744591d710e05922dbca7c53505113151b50aef"
 dependencies = [
  "bitflags",
- "facet-core",
+ "facet-core 0.28.0",
  "owo-colors",
 ]
 
 [[package]]
-name = "facet-serialize"
-version = "0.28.0"
+name = "facet-reflect"
+version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cca2724e50a1f41f9f0d3a035b9dd8ef4d174f2c3bfd7caaab4baeb6d69feed9"
+checksum = "759240e5415b59d2712aec606b374f5d10ad071b2ff17daeb53ec7e987b60ac3"
 dependencies = [
- "facet-core",
- "facet-reflect",
+ "bitflags",
+ "facet-core 0.29.0",
+]
+
+[[package]]
+name = "facet-serialize"
+version = "0.29.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8120d560b46dca40232f62fac58c9d986449dbf8b7f41f7aee71322fc09f93a1"
+dependencies = [
+ "facet-core 0.29.0",
+ "facet-reflect 0.29.0",
  "log",
 ]
 
@@ -172,8 +192,8 @@ dependencies = [
  "cargo-husky",
  "eyre",
  "facet",
- "facet-core",
- "facet-reflect",
+ "facet-core 0.28.0",
+ "facet-reflect 0.28.0",
  "facet-serialize",
  "facet-testhelpers",
  "log",
