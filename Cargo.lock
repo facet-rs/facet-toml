@@ -70,11 +70,11 @@ dependencies = [
 
 [[package]]
 name = "facet"
-version = "0.28.0"
+version = "0.29.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3290e0be77e9eeca366489c3b4010764dc897a83e5936a93857c3937f47a57aa"
+checksum = "c47b7ae49fd26ee306c81aa350375f16830946729a2339d51fde6a660a210946"
 dependencies = [
- "facet-core",
+ "facet-core 0.29.1",
  "facet-macros",
  "static_assertions",
 ]
@@ -90,20 +90,30 @@ dependencies = [
 ]
 
 [[package]]
-name = "facet-macros"
-version = "0.28.0"
+name = "facet-core"
+version = "0.29.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7eb526288148251e984f3a9ab3cef5191ca1da34a45fb5c548781e7053148e19"
+checksum = "9f448a18de9f8f180a0154dba3ca6ba36174f6f666c17bf94bc98df00e48bd47"
 dependencies = [
- "facet-core",
+ "bitflags",
+ "impls",
+]
+
+[[package]]
+name = "facet-macros"
+version = "0.29.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d726fb66effa4ef614ec0cd55828e5527ac4ed2efdfb3344e84048348e8c5cfe"
+dependencies = [
+ "facet-core 0.29.1",
  "facet-macros-emit",
 ]
 
 [[package]]
 name = "facet-macros-emit"
-version = "0.28.0"
+version = "0.29.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "52619b4834e81068fd915795c297e52f894a18742581627568d451e39dd1c906"
+checksum = "b3c8d5653543879fb9357b5ce45599a5f456e3225cedcb14f9b3d3d96dc1fe61"
 dependencies = [
  "facet-macros-parse",
  "quote",
@@ -111,9 +121,9 @@ dependencies = [
 
 [[package]]
 name = "facet-macros-parse"
-version = "0.28.0"
+version = "0.29.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6097c15775794dd66eb69cd4614be654877e3e6e4a93ca0d0440236c1798f0b"
+checksum = "9f775c1ed593adacc14d224aacedb0a633d0baab8a0107d9e61da53c8ba97736"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -127,7 +137,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c1d24ca6fb9db79b26cb5e37d744591d710e05922dbca7c53505113151b50aef"
 dependencies = [
  "bitflags",
- "facet-core",
+ "facet-core 0.28.0",
  "owo-colors",
 ]
 
@@ -137,7 +147,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cca2724e50a1f41f9f0d3a035b9dd8ef4d174f2c3bfd7caaab4baeb6d69feed9"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-reflect",
  "log",
 ]
@@ -172,7 +182,7 @@ dependencies = [
  "cargo-husky",
  "eyre",
  "facet",
- "facet-core",
+ "facet-core 0.28.0",
  "facet-reflect",
  "facet-serialize",
  "facet-testhelpers",
