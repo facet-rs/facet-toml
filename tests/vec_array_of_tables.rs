@@ -1,3 +1,4 @@
+#![cfg(feature = "deserialize")]
 //! Tests for Vec serialization and deserialization using TOML array of tables syntax.
 //!
 //! TOML has two ways to represent arrays:
@@ -8,9 +9,11 @@
 
 use facet::Facet;
 
+#[cfg(feature = "serialize")]
 #[derive(Debug, PartialEq, Facet)]
 struct NestedUnit;
 
+#[cfg(feature = "serialize")]
 #[derive(Debug, PartialEq, Facet)]
 struct Root {
     value: i32,
@@ -28,6 +31,7 @@ struct RootWithNested {
     nested: Vec<Nested>,
 }
 
+#[cfg(feature = "serialize")]
 #[test]
 #[should_panic(expected = "Expected field with name 'unit'")]
 fn test_nested_unit_struct_vec() {
@@ -46,6 +50,7 @@ fn test_nested_unit_struct_vec() {
     let _deserialized: Root = facet_toml::from_str(&serialized).unwrap();
 }
 
+#[cfg(feature = "serialize")]
 #[test]
 fn test_nested_struct_multiple_fields_vec() {
     let root = RootWithNested {
