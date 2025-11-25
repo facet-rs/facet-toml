@@ -40,5 +40,5 @@ cargo-husky = { version = "1.5.0", default-features = false, features = [
     "user-hooks",
 ] }
 eyre = "0.6.12"
-facet = { version = "0.30" }
+facet = { version = "0.31" }
 facet-testhelpers = { version = "0.30" }
