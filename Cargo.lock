@@ -117,7 +117,7 @@ checksum = "b88ddf668029af6fec4d3e3baaedc82f63667416a0e4b2487226212f70b53af9"
 dependencies = [
  "proc-macro2",
  "quote",
- "unsynn",
+ "unsynn 0.1.1",
 ]
 
 [[package]]
@@ -143,9 +143,9 @@ dependencies = [
 
 [[package]]
 name = "facet-testhelpers"
-version = "0.30.0"
+version = "0.31.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b70cb735e35eaee43d542ee8b709354da8b3dc00b4e5a9084c64be51a0a20c1f"
+checksum = "7a15db461e4d844d8b25d641db4564b6992ac5669b4790132ec04d8fd9b4673d"
 dependencies = [
  "color-backtrace",
  "facet-testhelpers-macros",
@@ -155,12 +155,12 @@ dependencies = [
 
 [[package]]
 name = "facet-testhelpers-macros"
-version = "0.29.0"
+version = "0.29.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f9a8e7044c1b922568e4061d6f3ee1bd391d053f11c371db348a0a6b649cbed"
+checksum = "222f3e6ef7143b86c0af4f0919aba0b809aef9206cbd717a533cc377cf3997ec"
 dependencies = [
  "quote",
- "unsynn",
+ "unsynn 0.3.0",
 ]
 
 [[package]]
@@ -276,6 +276,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustc-hash"
+version = "2.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "357703d41365b4b27c590e3ed91eabb1b663f07c4c084095e60cbed4362dff0d"
+
+[[package]]
 name = "shadow_counted"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -342,6 +348,17 @@ dependencies = [
  "mutants",
  "proc-macro2",
  "shadow_counted",
+]
+
+[[package]]
+name = "unsynn"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "501a7adf1a4bd9951501e5c66621e972ef8874d787628b7f90e64f936ef7ec0a"
+dependencies = [
+ "mutants",
+ "proc-macro2",
+ "rustc-hash",
 ]
 
 [[package]]
