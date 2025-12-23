@@ -1,3 +1,4 @@
+#![cfg(feature = "deserialize")]
 use facet::Facet;
 
 #[derive(Debug, PartialEq, Clone, Facet)]
